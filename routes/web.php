@@ -20,9 +20,15 @@ Route::get('/', function () {
     return view('frontend.home');
 });
 
+Route::get('/shop', function () {
+    return view('frontend.shop');
+});
 
 
 
+Route::get('/shop-Detail', function () {
+    return view('frontend.shopDetail');
+});
 
 
 
