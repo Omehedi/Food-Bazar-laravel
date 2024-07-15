@@ -36,7 +36,7 @@
 
 
 
-@yield('shoppage');
+{{--@yield('shoppage');--}}
 @yield('shop');
 
 

@@ -304,7 +304,7 @@
                                         <a class="nav-link" href="{{ asset('backend/pages/blank-page-header.html') }}">Blank Page Header</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ asset('backend/pages/login.html') }}">Login</a>
+                                        <a class="nav-link" href="{{ url('/login') }}">Login</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ asset('backend/pages/404-page.html') }}">404 page</a>

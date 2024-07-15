@@ -32,6 +32,14 @@ Route::get('/shop-Detail', function () {
 
 
 
+use App\Http\Controllers\LoginController;
+
+Route::get('/login', [\App\Http\Controllers\LoginController::class, 'index'])->name('login');
+Route::post('/login', [\App\Http\Controllers\LoginController::class, 'doLogin'])->name('doLogin');
+
+
+
+
 Route::prefix('/')->group(function () {
     Route::get('/', [FrontendController::class, 'index']);
     Route::get('/categories', [FrontendController::class, 'webCategory']);
@@ -55,5 +63,14 @@ Route::prefix('admin')->group(function () {
     Route::get('/news', [DashboardController::class, 'news']);
     Route::get('/contact', [DashboardController::class, 'contact']);
 });
+
+
+
+
+
+
+
+
+
 
 
