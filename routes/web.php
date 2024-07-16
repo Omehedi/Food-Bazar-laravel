@@ -46,24 +46,32 @@ Route::prefix('/')->group(function () {
     Route::get('/contact', [FrontendController::class, 'webContact']);
 });
 
-Route::prefix('admin')->group(function () {
+Route::prefix('admin') ->middleware('authCheck')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/logout',[\App\Http\Controllers\LoginController::class, 'logout'])->name('logout');
+    Route::get('/dashboard',[\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
 
-    Route::prefix('category')->group(function () {
+    Route::prefix('category') ->middleware('authCheck')->group(function () {
         Route::get('/', [CategoryController::class, 'category'])->name('cat.list');
         Route::get('/add', [CategoryController::class, 'create'])->name('cat.add');
         Route::post('/add', [CategoryController::class, 'store'])->name('cat.submit');
         Route::get('/edit/{id}', [CategoryController::class, 'edit'])->name('cat.edit');
         Route::post('/edit', [CategoryController::class, 'update'])->name('cat.update');
+        Route::get('/delete/{id}', [\App\Http\Controllers\Backend\CategoryController::class, 'delete'])->name('cat.delete');
+
+
+
+        Route::resource('news',\App\Http\Controllers\NewsController::class);
+
+
 
     });
-    Route::get('/delete/{id}', [\App\Http\Controllers\Backend\CategoryController::class, 'delete'])->name('cat.delete');
 
-    Route::get('/news', [DashboardController::class, 'news']);
-    Route::get('/contact', [DashboardController::class, 'contact']);
 });
 
+Route::get('/news', [DashboardController::class, 'news']);
+Route::get('/contact', [DashboardController::class, 'contact']);
 
 
 

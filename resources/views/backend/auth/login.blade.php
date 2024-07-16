@@ -131,6 +131,8 @@
             <span class="splash-description">Please enter your user information.</span>
         </div>
         <div class="card-body">
+            <span class="text-danger">{{Session::has('failed') ? Session::get('failed') : ''}}</span>
+        </div>
             <form class="user" action="{{ route('doLogin') }}" method="post">
                 @csrf
                 <div class="form-group">

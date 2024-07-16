@@ -128,7 +128,7 @@
                             </div>
                             <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
                             <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
-                            <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                            <a class="dropdown-item" href="{{route('logout')}}"><i class="fas fa-power-off mr-2"></i>Logout</a>
                         </div>
                     </li>
                 </ul>
@@ -203,30 +203,30 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>UI Elements</a>
+                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>Category</a>
                             <div id="submenu-2" class="collapse submenu" style="">
                                 <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ asset('backend/pages/cards.html') }}">Cards <span class="badge badge-secondary">New</span></a>
-                                    </li>
+{{--                                    <li class="nav-item">--}}
+{{--                                        <a class="nav-link" href="{{ asset('backend/pages/cards.html') }}">Cards <span class="badge badge-secondary">New</span></a>--}}
+{{--                                    </li>--}}
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ asset('backend/pages/general.html') }}">General</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ asset('backend/pages/carousel.html') }}">Carousel</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ asset('backend/pages/listgroup.html') }}">List Group</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ asset('backend/pages/typography.html') }}">Typography</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ asset('backend/pages/accordions.html') }}">Accordions</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ asset('backend/pages/tabs.html') }}">Tabs</a>
-                                    </li>
+{{--                                    <li class="nav-item">--}}
+{{--                                        <a class="nav-link" href="{{ asset('backend/pages/listgroup.html') }}">List Group</a>--}}
+{{--                                    </li>--}}
+{{--                                    <li class="nav-item">--}}
+{{--                                        <a class="nav-link" href="{{ asset('backend/pages/typography.html') }}">Typography</a>--}}
+{{--                                    </li>--}}
+{{--                                    <li class="nav-item">--}}
+{{--                                        <a class="nav-link" href="{{ asset('backend/pages/accordions.html') }}">Accordions</a>--}}
+{{--                                    </li>--}}
+{{--                                    <li class="nav-item">--}}
+{{--                                        <a class="nav-link" href="{{ asset('backend/pages/tabs.html') }}">Tabs</a>--}}
+{{--                                    </li>--}}
                                 </ul>
                             </div>
                         </li>
