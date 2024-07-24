@@ -14,7 +14,7 @@ class SubctegoryController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**

@@ -209,13 +209,20 @@
 {{--                                    <li class="nav-item">--}}
 {{--                                        <a class="nav-link" href="{{ asset('backend/pages/cards.html') }}">Cards <span class="badge badge-secondary">New</span></a>--}}
 {{--                                    </li>--}}
+
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ asset('backend/pages/general.html') }}">General</a>
+                                        <a class="nav-link" href="{{ route('card') }}">Card</a>
                                     </li>
+
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ asset('backend/pages/carousel.html') }}">Carousel</a>
+                                        <a class="nav-link" href="{{ route('list') }}">CategoryList</a>
                                     </li>
-{{--                                    <li class="nav-item">--}}
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('card') }}"></a>
+                                    </li>
+
+                                    {{--                                    <li class="nav-item">--}}
 {{--                                        <a class="nav-link" href="{{ asset('backend/pages/listgroup.html') }}">List Group</a>--}}
 {{--                                    </li>--}}
 {{--                                    <li class="nav-item">--}}
