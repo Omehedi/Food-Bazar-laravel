@@ -116,19 +116,9 @@ Route::get('/card', [\App\Http\Controllers\Backend\NewsController::class, 'creat
 
 
 
+Route::get('news/delete/{id}', [App\Http\Controllers\Backend\NewsController::class, 'destroy'])->name('news.delete');
 
-//Route::get('/backend/news/list', [\App\Http\Controllers\Backend\NewsController::class, 'list'])->name('news.list');
-//Route::post('/backend/news/card', [\App\Http\Controllers\Backend\NewsController::class, 'card'])->name('news.card');
-
-
-
-
-
-
-//Route::get('/news/create', [NewsController::class, 'create'])->name('news.create');
-//Route::post('/news/store', [NewsController::class, 'store'])->name('news.store');
-
-
+Route::get('news/edit/{id}', [App\Http\Controllers\Backend\NewsController::class, 'edit'])->name('news.edit');
 
 
 

@@ -211,16 +211,9 @@
 {{--                                    </li>--}}
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('card') }}">Card</a>
+                                        <a class="nav-link" href="{{ route('card') }}">NewsCreate</a>
                                     </li>
 
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('list') }}">CategoryList</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('card') }}"></a>
-                                    </li>
 
                                     {{--                                    <li class="nav-item">--}}
 {{--                                        <a class="nav-link" href="{{ asset('backend/pages/listgroup.html') }}">List Group</a>--}}

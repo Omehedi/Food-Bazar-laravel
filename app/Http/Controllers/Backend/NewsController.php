@@ -64,7 +64,9 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $news = News::findOrFail($id);
+        $categories = Category::all();
+        return view('backend.news.newsEdit', compact('news', 'categories'));
     }
 
     /**
@@ -76,7 +78,19 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'category_id' => 'required',
+            'details' => 'required',
+        ]);
+
+        $news = News::findOrFail($id);
+        $news->fill($request->all());
+        // Additional fields if needed
+        $news->save();
+
+        Session::flash('success', 'News successfully updated.');
+        return redirect()->route('news.index');
     }
 
     /**
@@ -87,7 +101,13 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        {
+            $news = News::findOrFail($id);
+            $news->delete();
+
+            Session::flash('success', 'Successfully Deleted');
+            return redirect()->route('news.index');
+        }
     }
 
 
