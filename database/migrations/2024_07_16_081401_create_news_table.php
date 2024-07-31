@@ -22,9 +22,12 @@ return new class extends Migration
             $table->integer('status')->default(1);
             $table->integer('view')->default(0);
             $table->unsignedBigInteger('created_by');
+            $table->string('thumbnail')->nullable();
             $table->timestamps();
         });
     }
+
+
 
     /**
      * Reverse the migrations.

@@ -1,50 +1,92 @@
-<div class="container-fluid fixed-top shadow" style="top: -55px;">
-    <div class="container topbar bg-primary d-none d-lg-block">
-        <div class="d-flex justify-content-between">
-            <div class="top-info ps-2">
-                <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">123 Street, New York</a></small>
-                <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">Email@Example.com</a></small>
-            </div>
-            <div class="top-link pe-2">
-                <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
-                <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small>/</a>
-                <a href="#" class="text-white"><small class="text-white ms-2">Sales and Refunds</small></a>
-            </div>
+<!-- Topbar Start -->
+<div class="container-fluid d-none d-lg-block">
+    <div class="row align-items-center bg-dark px-lg-5">
+        <div class="col-lg-9">
+            <nav class="navbar navbar-expand-sm bg-dark p-0">
+                <ul class="navbar-nav ml-n2">
+                    <li class="nav-item border-right border-secondary">
+                        <a class="nav-link text-body small" href="#">Monday, January 1, 2045</a>
+                    </li>
+                    <li class="nav-item border-right border-secondary">
+                        <a class="nav-link text-body small" href="#">Advertise</a>
+                    </li>
+                    <li class="nav-item border-right border-secondary">
+                        <a class="nav-link text-body small" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-body small" href="#">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-lg-3 text-right d-none d-md-block">
+            <nav class="navbar navbar-expand-sm bg-dark p-0">
+                <ul class="navbar-nav ml-auto mr-n2">
+                    <li class="nav-item">
+                        <a class="nav-link text-body" href="#"><small class="fab fa-twitter"></small></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-body" href="#"><small class="fab fa-facebook-f"></small></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-body" href="#"><small class="fab fa-linkedin-in"></small></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-body" href="#"><small class="fab fa-instagram"></small></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-body" href="#"><small class="fab fa-google-plus-g"></small></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-body" href="#"><small class="fab fa-youtube"></small></a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
-    <div class="container px-0">
-        <nav class="navbar navbar-light bg-white navbar-expand-xl">
-            <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Fruitables</h1></a>
-            <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars text-primary"></span>
-            </button>
-            <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
-                <div class="navbar-nav mx-auto">
-                    <a href="{{url('/')}}" class="nav-item nav-link">Home</a>
-                    <a href="shop.html" class="nav-item nav-link active">Shop</a>
-                    <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                            <a href="cart.html" class="dropdown-item">Cart</a>
-                            <a href="chackout.html" class="dropdown-item">Chackout</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Page</a>
-                        </div>
+    <div class="row align-items-center bg-white py-3 px-lg-5">
+        <div class="col-lg-4">
+            <a href="{{url('/')}}" class="navbar-brand p-0 d-none d-lg-block">
+                <h1 class="m-0 display-4 text-uppercase text-primary">Bangladesh<span class="text-secondary font-weight-normal">News</span></h1>
+            </a>
+        </div>
+        <div class="col-lg-8 text-center text-lg-right">
+{{--            <a href="{{url('/')}}"><img class="img-fluid" src="{{asset('frontend/img/ads-728x90.png')}}" alt=""></a>--}}
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+<!-- Navbar Start -->
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="m-0 display-4 text-uppercase text-primary">Bangladesh<span class="text-white font-weight-normal">News</span></h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav mr-auto py-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="category.html" class="nav-item nav-link">Category</a>
+                <a href="single.html" class="nav-item nav-link">Single News</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                    <div class="dropdown-menu rounded-0 m-0">
+                        <a href="#" class="dropdown-item">Menu item 1</a>
+                        <a href="#" class="dropdown-item">Menu item 2</a>
+                        <a href="#" class="dropdown-item">Menu item 3</a>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
-                <div class="d-flex m-3 me-0">
-                    <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
-                    <a href="#" class="position-relative me-4 my-auto">
-                        <i class="fa fa-shopping-bag fa-2x"></i>
-                        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
-                    </a>
-                    <a href="#" class="my-auto">
-                        <i class="fas fa-user fa-2x"></i>
-                    </a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+                <input type="text" class="form-control border-0" placeholder="Keyword">
+                <div class="input-group-append">
+                    <button class="input-group-text bg-primary text-dark border-0 px-3"><i
+                                class="fa fa-search"></i></button>
                 </div>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
 </div>

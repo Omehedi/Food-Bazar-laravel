@@ -30,11 +30,19 @@ class NewsController extends Controller
 
     public function store(Request $request)
     {
+
         $this->validate($request, [
             'title' => 'required',
             'category_id' => 'required',
             'details' => 'required',
+            'thumbnail'=> 'required',
         ]);
+
+        $imageName = '';
+        if ($image = $request->file('thumbnail')){
+            $imageName = time().'-'.uniqid().'.'.$image->getClientOriginalExtension();
+            $image->move(storage_path('uploads'), $imageName);
+        }
 
         $input = $request->except('_token');
 
@@ -42,6 +50,7 @@ class NewsController extends Controller
         $news->fill($input);
         $news->date = date('Y-m-d');
         $news->created_by = auth()->user()->id;
+        $news->thumbnail = $imageName;
         $news->save();
 
 
@@ -85,13 +94,35 @@ class NewsController extends Controller
         ]);
 
         $news = News::findOrFail($id);
-        $news->fill($request->all());
-        // Additional fields if needed
-        $news->save();
+        $input = $request->except('_token');
 
-        Session::flash('success', 'News successfully updated.');
-        return redirect()->route('news.index');
+        if ($news) {
+            $imageName = $news->thumbnail; // Default to the existing image
+
+            if ($image = $request->file('thumbnail')) {
+                // Store new image
+                $imageName = time() . '-' . uniqid() . '.' . $image->getClientOriginalExtension();
+                $image->move(storage_path('uploads'), $imageName);
+
+                // Optionally, delete the old image if desired
+                // if (file_exists(storage_path('uploads') . '/' . $news->thumbnail)) {
+                //     unlink(storage_path('uploads') . '/' . $news->thumbnail);
+                // }
+            }
+
+            $news->fill($input);
+            $news->thumbnail = $imageName;
+            $news->save();
+
+            Session::flash('success', 'News successfully updated.');
+            return redirect()->route('news.index');
+        }
+
+        Session::flash('error', 'News not updated.');
+        return redirect()->back();
     }
+
+
 
     /**
      * Remove the specified resource from storage.
@@ -121,3 +152,7 @@ class NewsController extends Controller
 
 
 }
+
+
+
+

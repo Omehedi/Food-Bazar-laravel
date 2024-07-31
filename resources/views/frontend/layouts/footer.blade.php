@@ -1,68 +1,89 @@
-<div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
-    <div class="container py-5">
-        <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
-            <div class="row g-4">
-                <div class="col-lg-3">
-                    <a href="#">
-                        <h1 class="text-primary mb-0">Fruitables</h1>
-                        <p class="text-secondary mb-0">Fresh products</p>
-                    </a>
-                </div>
-                <div class="col-lg-6">
-                    <div class="position-relative mx-auto">
-                        <input class="form-control border-0 w-100 py-3 px-4 rounded-pill" type="number" placeholder="Your Email">
-                        <button type="submit" class="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white" style="top: 0; right: 0;">Subscribe Now</button>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="d-flex justify-content-end pt-3">
-                        <a class="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-secondary btn-md-square rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
+<div class="container-fluid bg-dark pt-5 px-sm-3 px-md-5 mt-5">
+    <div class="row py-4">
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h5 class="mb-4 text-white text-uppercase font-weight-bold">Get In Touch</h5>
+            <p class="font-weight-medium"><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
+            <p class="font-weight-medium"><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+            <p class="font-weight-medium"><i class="fa fa-envelope mailto:mr-2"></i>info@example.com</p>
+            <h6 class="mt-4 mb-3 text-white text-uppercase font-weight-bold">Follow Us</h6>
+            <div class="d-flex justify-content-start">
+                <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-lg btn-secondary btn-lg-square" href="#"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
-        <div class="row g-5">
-            <div class="col-lg-3 col-md-6">
-                <div class="footer-item">
-                    <h4 class="text-light mb-3">Why People Like us!</h4>
-                    <p class="mb-4">typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the like Aldus PageMaker including of Lorem Ipsum.</p>
-                    <a href="" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Read More</a>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h5 class="mb-4 text-white text-uppercase font-weight-bold">Popular News</h5>
+            <div class="mb-3">
+                <div class="mb-2">
+                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
+                    <a class="text-body" href=""><small>Jan 01, 2045</small></a>
                 </div>
+                <a class="small text-body text-uppercase font-weight-medium" href="">Lorem ipsum dolor sit amet elit. Proin vitae porta diam...</a>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="d-flex flex-column text-start footer-item">
-                    <h4 class="text-light mb-3">Shop Info</h4>
-                    <a class="btn-link" href="">About Us</a>
-                    <a class="btn-link" href="">Contact Us</a>
-                    <a class="btn-link" href="">Privacy Policy</a>
-                    <a class="btn-link" href="">Terms &amp; Condition</a>
-                    <a class="btn-link" href="">Return Policy</a>
-                    <a class="btn-link" href="">FAQs &amp; Help</a>
+            <div class="mb-3">
+                <div class="mb-2">
+                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
+                    <a class="text-body" href=""><small>Jan 01, 2045</small></a>
                 </div>
+                <a class="small text-body text-uppercase font-weight-medium" href="">Lorem ipsum dolor sit amet elit. Proin vitae porta diam...</a>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="d-flex flex-column text-start footer-item">
-                    <h4 class="text-light mb-3">Account</h4>
-                    <a class="btn-link" href="">My Account</a>
-                    <a class="btn-link" href="">Shop details</a>
-                    <a class="btn-link" href="">Shopping Cart</a>
-                    <a class="btn-link" href="">Wishlist</a>
-                    <a class="btn-link" href="">Order History</a>
-                    <a class="btn-link" href="">International Orders</a>
+            <div class="">
+                <div class="mb-2">
+                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
+                    <a class="text-body" href=""><small>Jan 01, 2045</small></a>
                 </div>
+                <a class="small text-body text-uppercase font-weight-medium" href="">Lorem ipsum dolor sit amet elit. Proin vitae porta diam...</a>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="footer-item">
-                    <h4 class="text-light mb-3">Contact</h4>
-                    <p>Address: 1429 Netus Rd, NY 48247</p>
-                    <p>Email: Example@gmail.com</p>
-                    <p>Phone: +0123 4567 8910</p>
-                    <p>Payment Accepted</p>
-                    <img src="img/payment.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h5 class="mb-4 text-white text-uppercase font-weight-bold">Categories</h5>
+            <div class="m-n1">
+                <a href="" class="btn btn-sm btn-secondary m-1">Politics</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Business</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Corporate</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Business</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Health</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Education</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Science</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Business</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Foods</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Entertainment</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Travel</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Lifestyle</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Politics</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Business</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Corporate</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Business</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Health</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Education</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Science</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Business</a>
+                <a href="" class="btn btn-sm btn-secondary m-1">Foods</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h5 class="mb-4 text-white text-uppercase font-weight-bold">Flickr Photos</h5>
+            <div class="row">
+                <div class="col-4 mb-3">
+                    <a href=""><img class="w-100" src="{{asset('frontend/img/news-110x110-1.jpg')}}" alt=""></a>
+                </div>
+                <div class="col-4 mb-3">
+                    <a href=""><img class="w-100" src="{{asset('frontend/img/news-110x110-2.jpg')}}" alt=""></a>
+                </div>
+                <div class="col-4 mb-3">
+                    <a href=""><img class="w-100" src="{{asset('frontend/img/news-110x110-3.jpg')}}" alt=""></a>
+                </div>
+                <div class="col-4 mb-3">
+                    <a href=""><img class="w-100" src="{{asset('frontend/img/news-110x110-4.jpg')}}" alt=""></a>
+                </div>
+                <div class="col-4 mb-3">
+                    <a href=""><img class="w-100" src="{{asset('frontend/img/news-110x110-5.jpg')}}" alt=""></a>
+                </div>
+                <div class="col-4 mb-3">
+                    <a href=""><img class="w-100" src="{{asset('frontend/img/news-110x110-1.jpg')}}" alt=""></a>
                 </div>
             </div>
         </div>

@@ -16,7 +16,7 @@
             <a href="{{ route('news.index') }}" class="btn btn-secondary">Back to List</a>
         </div>
         <div class="card-body">
-            <form method="post" action="{{ route('news.update', $news->id) }}">
+            <form method="post" enctype="multipart/form-data" action="{{ route('news.update', $news->id) }}">
                 @csrf
                 @method('PUT')
 
@@ -64,6 +64,12 @@
                 </div>
 
                 <div class="form-group">
+                    <label>Thumbnail</label>
+                    <input type="file" name="thumbnail">
+                    <span class="text-danger">{{$errors->has('details') ? $errors->first('details') : ''}}</span>
+                </div>
+
+                <div class="form-group">
                     <button type="submit" class="btn btn-primary">Update</button>
                     <a href="{{ route('news.index') }}" class="btn btn-secondary">Cancel</a>
                 </div>
@@ -78,6 +84,13 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
 
 
 
