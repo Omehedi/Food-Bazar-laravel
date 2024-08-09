@@ -47,11 +47,9 @@
     <div class="row align-items-center bg-white py-3 px-lg-5">
         <div class="col-lg-4">
             <a href="{{url('/')}}" class="navbar-brand p-0 d-none d-lg-block">
-                <h1 class="m-0 display-4 text-uppercase text-primary">Bangladesh<span class="text-secondary font-weight-normal">News</span></h1>
+{{--                <h1 class="m-0 display-4 text-uppercase text-primary">প্রথম আলো<span class="text-secondary font-weight-normal">News</span></h1>--}}
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUTX3amtUek4Ia80_rbqUkfwS6sYaeSUdqwg&s">
             </a>
-        </div>
-        <div class="col-lg-8 text-center text-lg-right">
-{{--            <a href="{{url('/')}}"><img class="img-fluid" src="{{asset('frontend/img/ads-728x90.png')}}" alt=""></a>--}}
         </div>
     </div>
 </div>

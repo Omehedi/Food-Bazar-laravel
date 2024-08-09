@@ -31,7 +31,7 @@
                             </div>
                             <h1 class="mb-3 text-secondary text-uppercase font-weight-bold">{{$news->title}}</h1>
                             <p>
-                                {{$news->details}}
+                                {!! $news->details !!}
                             </p>
                         </div>
                         <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
@@ -86,41 +86,48 @@
                     <!-- Comment List End -->
 
                     <!-- Comment Form Start -->
+                    <!-- Comment Form Start -->
+
                     <div class="mb-3">
                         <div class="section-title mb-0">
                             <h4 class="m-0 text-uppercase font-weight-bold">Leave a comment</h4>
                         </div>
                         <div class="bg-white border border-top-0 p-4">
-                            <form>
-                                <div class="form-row">
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="name">Name *</label>
-                                            <input type="text" class="form-control" id="name">
+                            @if(auth()->guard('visitor')->check())
+                                <form id="commentForm" action="{{route('comment.store')}}">
+                                    <div class="form-row">
+                                        <div class="col-12">
+                                            <span id="showMessage"></span>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="name">Name *</label>
+                                                <input readonly type="text" class="form-control" id="name" value="{{auth()->guard('visitor')->user()->name}}" name="name" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="email">Email *</label>
+                                                <input readonly type="email" class="form-control" id="email" value="{{auth()->guard('visitor')->user()->email}}" name="email" required>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="email">Email *</label>
-                                            <input type="email" class="form-control" id="email">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="website">Website</label>
-                                    <input type="url" class="form-control" id="website">
-                                </div>
 
-                                <div class="form-group">
-                                    <label for="message">Message *</label>
-                                    <textarea id="message" cols="30" rows="5" class="form-control"></textarea>
-                                </div>
-                                <div class="form-group mb-0">
-                                    <input type="submit" value="Leave a comment" class="btn btn-primary font-weight-semi-bold py-2 px-3">
-                                </div>
-                            </form>
+                                    <div class="form-group">
+                                        <label for="message">Message *</label>
+                                        <textarea id="message" name="message" cols="30" rows="5" class="form-control" required></textarea>
+                                    </div>
+                                    <div class="form-group mb-0">
+                                        <input type="submit" value="Leave a comment" class="btn btn-primary font-weight-semi-bold py-2 px-3">
+                                    </div>
+                                </form>
+                            @else
+                                <a href="{{route('comment.index')}}?url={{request()->fullUrl()}}" class="btn btn-primary">Login</a>
+                            @endif
                         </div>
                     </div>
+
+
                     <!-- Comment Form End -->
                 </div>
 
@@ -274,3 +281,42 @@
         </div>
     </div>
 @endsection
+
+
+@section('script')
+    <script>
+        $('#commentForm').on('submit', function (e){
+            e.preventDefault();
+            let reqObject = {
+                 // name : $('#name').val(),
+                 // email : $('#email').val(),
+                message : $('#message').val(),
+                _token : '{{csrf_token()}}',
+                title : '{{$news->id}}'
+            }
+            $.ajax({
+                type: "POST",
+                url: $(this).attr('action'),
+                data: reqObject,
+                success: function(res){
+                    if(parseInt(res.status) === 2000){
+                        $('#showMessage').text(res.message);
+                    }else{
+                        alert(res.message);
+                    }
+                },
+                error : function (dsdsd){
+                    console.log(dsdsd);
+                }
+            });
+        });
+    </script>
+@endsection
+
+
+
+
+
+
+
+

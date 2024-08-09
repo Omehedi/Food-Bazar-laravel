@@ -39,11 +39,11 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    {{ $news->links() }}
-                </div>
+{{--            pagination--}}
+            <div class="d-flex justify-content-center">
+                {{ $news->links('pagination::bootstrap-5') }}
             </div>
+
         </div>
     </div>
 @endsection

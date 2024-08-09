@@ -73,6 +73,8 @@
 
 <!-- Template Javascript -->
 <script src="{{asset('frontend/js/main.js')}}"></script>
+
+@yield('script')
 </body>
 
 </html>

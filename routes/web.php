@@ -11,6 +11,10 @@ Route::prefix('/')->group(function () {
     Route::get('/categories/{category_id}', [\App\Http\Controllers\Frontend\FrontendController::class, 'webCategory'])->name('wb.cat');
     Route::get('/news/{news_id}', [\App\Http\Controllers\Frontend\FrontendController::class, 'newsDetails'])->name('wb.news');
     Route::get('/contact', [\App\Http\Controllers\Frontend\FrontendController::class, 'webContact']);
+    Route::resource('/comment', \App\Http\Controllers\Frontend\CommentController::class);
+    Route::resource('/visitor_login', \App\Http\Controllers\VisitorLoginController::class);
+    Route::post('/visitor_do_login', [\App\Http\Controllers\VisitorLoginController::class,'visitor_do_login'])->name('visitor_do_login');
+
 });
 
 Route::prefix('admin')->middleware('authCheck')->group(function () {
@@ -47,5 +51,9 @@ Route::get('/card', [\App\Http\Controllers\Backend\NewsController::class, 'creat
 Route::get('news/delete/{id}', [App\Http\Controllers\Backend\NewsController::class, 'destroy'])->name('news.delete');
 
 Route::get('news/edit/{id}', [App\Http\Controllers\Backend\NewsController::class, 'edit'])->name('news.edit');
+
+
+
+
 
 
