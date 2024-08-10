@@ -33,44 +33,6 @@
 <!-- ============================================================== -->
 <!-- login page  -->
 <!-- ============================================================== -->
-{{--<div class="splash-container">--}}
-{{--    <div class="card ">--}}
-{{--        <div class="card-header text-center">--}}
-{{--            <h1 class="h4 text-gray-900 mb-4">Visitor Registration</h1>--}}
-{{--            <span class="splash-description">Please enter your visitor information.</span>--}}
-{{--        </div>--}}
-{{--        <div class="card-body">--}}
-{{--            <span class="text-danger">{{Session::has('failed') ? Session::get('failed') : ''}}</span>--}}
-{{--        </div>--}}
-{{--        <form class="user" action="{{ route('doLogin') }}" method="post">--}}
-{{--            @csrf--}}
-{{--            <div class="form-group">--}}
-{{--                <input class="form-control form-control-lg" name="name" type="text" placeholder="Enter Name" autocomplete="off" required>--}}
-{{--            </div>--}}
-{{--            <div class="form-group">--}}
-{{--                <input class="form-control form-control-lg" id="email" name="email" type="email" placeholder="Email" autocomplete="off" required>--}}
-{{--            </div>--}}
-{{--            <div class="form-group">--}}
-{{--                <input class="form-control form-control-lg" id="password" name="password" type="password" placeholder="Password" required>--}}
-{{--            </div>--}}
-{{--            <div class="form-group">--}}
-{{--                <label class="custom-control custom-checkbox">--}}
-{{--                    <input class="custom-control-input" type="checkbox" name="remember"><span class="custom-control-label">Remember Me</span>--}}
-{{--                </label>--}}
-{{--            </div>--}}
-{{--            <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>--}}
-{{--        </form>--}}
-{{--    </div>--}}
-{{--    <div class="card-footer bg-white p-0">--}}
-{{--        <div class="card-footer-item card-footer-item-bordered">--}}
-{{--            <a href="{{route('comment.index')}}" class="footer-link">Already Registered</a>--}}
-{{--        </div>--}}
-{{--        <div class="card-footer-item card-footer-item-bordered">--}}
-{{--            <a href="#" class="footer-link">Forgot Password</a>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
-{{--</div>--}}
 
 
 <div class="container">

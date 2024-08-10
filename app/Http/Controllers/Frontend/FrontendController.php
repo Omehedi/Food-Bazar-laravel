@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Comment;
+
 use App\Models\News;
 
 class FrontendController extends Controller
@@ -23,6 +25,9 @@ class FrontendController extends Controller
     public function newsDetails($newsId)
     {
         $data['news'] = News::with('author:name,id', 'category:category_name,id')->where('id', $newsId)->first();
+//        $data['comments'] = Comment::take(5)->orderBy('id', 'DESC')->get();
+        $data['comments'] = Comment::where('title', $newsId)->orderBy('id', 'DESC')->take(5)->get();
+        $data['comment_count'] = Comment::count();
         return view('frontend.news_details', $data);
     }
 

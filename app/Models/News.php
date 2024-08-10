@@ -26,22 +26,4 @@ class News extends Model
 
 
 
-
-
-    //comments create by me
-//    public function comments()
-//    {
-//        return $this->hasMany(Comment::class);
-//    }
-//
-//    public function author1()
-//    {
-//        return $this->belongsTo(User::class, 'author_id');
-//    }
-//
-//    public function category1()
-//    {
-//        return $this->belongsTo(Category::class, 'category_id');
-//    }
-
 }
