@@ -349,6 +349,8 @@
 
 @extends('frontend.layouts.master')
 @section('content')
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
     <div class="container-fluid mt-5 mb-3 pt-3">
         <div class="container">
             <div class="row align-items-center">
@@ -396,6 +398,8 @@
                     </div>
                     <!-- News Detail End -->
 
+
+
                     <!-- Comment List Start -->
                     <div class="mb-3">
                         <div class="section-title mb-0">
@@ -415,7 +419,8 @@
                     </div>
                     <!-- Comment List End -->
 
-                    <!-- Comment Form Start -->
+
+
                     <!-- Comment Form Start -->
 
                     <div class="mb-3">
@@ -461,6 +466,7 @@
                     <!-- Comment Form End -->
                 </div>
 
+
                 <div class="col-lg-4">
                     <!-- Social Follow Start -->
                     <div class="mb-3">
@@ -468,33 +474,52 @@
                             <h4 class="m-0 text-uppercase font-weight-bold">Follow Us</h4>
                         </div>
                         <div class="bg-white border border-top-0 p-3">
-                            <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #39569E;">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(Request::fullUrl()) }}" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #39569E;">
                                 <i class="fab fa-facebook-f text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                                <span class="font-weight-medium">12,345 Fans</span>
+                                <span class="font-weight-medium">Share on Facebook</span>
                             </a>
-                            <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #52AAF4;">
+                            <a href="https://twitter.com/intent/tweet?url={{ urlencode(Request::fullUrl()) }}&text={{ urlencode($news->title) }}" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #52AAF4;">
                                 <i class="fab fa-twitter text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                                <span class="font-weight-medium">12,345 Followers</span>
+                                <span class="font-weight-medium">Share on Twitter</span>
                             </a>
-                            <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #0185AE;">
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ urlencode(Request::fullUrl()) }}&title={{ urlencode($news->title) }}" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #0185AE;">
                                 <i class="fab fa-linkedin-in text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                                <span class="font-weight-medium">12,345 Connects</span>
+                                <span class="font-weight-medium">Share on LinkedIn</span>
                             </a>
-                            <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #C8359D;">
-                                <i class="fab fa-instagram text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                                <span class="font-weight-medium">12,345 Followers</span>
+                            <a href="https://wa.me/?text={{ urlencode($news->title) }}%20{{ urlencode(Request::fullUrl()) }}" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #25D366;">
+                                <i class="fab fa-whatsapp text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
+                                <span class="font-weight-medium">Share on WhatsApp</span>
                             </a>
-                            <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #DC472E;">
+                            <a href="https://www.youtube.com/share?url={{ urlencode(Request::fullUrl()) }}" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #DC472E;">
                                 <i class="fab fa-youtube text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                                <span class="font-weight-medium">12,345 Subscribers</span>
+                                <span class="font-weight-medium">Share on YouTube</span>
                             </a>
-                            <a href="" class="d-block w-100 text-white text-decoration-none" style="background: #055570;">
+
+                            <a href="https://vimeo.com/share?url={{ urlencode(Request::fullUrl()) }}" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #055570;">
                                 <i class="fab fa-vimeo-v text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                                <span class="font-weight-medium">12,345 Followers</span>
+                                <span class="font-weight-medium">Share on Vimeo</span>
+                            </a>
+                            <a href="https://pinterest.com/pin/create/button/?url={{ urlencode(Request::fullUrl()) }}&media={{ urlencode($news->image) }}&description={{ urlencode($news->title) }}" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #E60023;" target="_blank">
+                                <i class="fab fa-pinterest-p text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
+                                <span class="font-weight-medium">Share on Pinterest</span>
+                            </a>
+                            <a href="https://www.reddit.com/submit?url={{ urlencode(Request::fullUrl()) }}&title={{ urlencode($news->title) }}" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #FF4500;" target="_blank">
+                                <i class="fab fa-reddit-alien text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
+                                <span class="font-weight-medium">Share on Reddit</span>
+                            </a>
+                            <a href="https://www.tumblr.com/share/link?url={{ urlencode(Request::fullUrl()) }}&name={{ urlencode($news->title) }}" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #35465C;" target="_blank">
+                                <i class="fab fa-tumblr text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
+                                <span class="font-weight-medium">Share on Tumblr</span>
+                            </a>
+                            <a href="https://t.me/share/url?url={{ urlencode(Request::fullUrl()) }}&text={{ urlencode($news->title) }}" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #0088cc;" target="_blank">
+                                <i class="fab fa-telegram-plane text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
+                                <span class="font-weight-medium">Share on Telegram</span>
                             </a>
                         </div>
                     </div>
                     <!-- Social Follow End -->
+
+
 
                     <!-- Ads Start -->
                     <div class="mb-3">
@@ -506,6 +531,8 @@
                         </div>
                     </div>
                     <!-- Ads End -->
+
+
 
                     <!-- Popular News Start -->
                     <div class="mb-3">
@@ -567,6 +594,8 @@
                     </div>
                     <!-- Popular News End -->
 
+
+
                     <!-- Newsletter Start -->
                     <div class="mb-3">
                         <div class="section-title mb-0">
@@ -584,6 +613,8 @@
                         </div>
                     </div>
                     <!-- Newsletter End -->
+
+
 
                     <!-- Tags Start -->
                     <div class="mb-3">
