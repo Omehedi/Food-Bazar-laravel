@@ -95,7 +95,8 @@
 
 
 
-
+{{--localization create--}}
+{{App::setLocale('en')}}
 
 
         <!DOCTYPE html>
@@ -112,7 +113,8 @@
 <div class="container mt-5">
     <div class="card shadow mb-4">
         <div class="card-header py-3 d-flex justify-content-between align-items-center">
-            <h5 class="m-0 font-weight-bold text-primary">Create News Item</h5>
+{{--            <h5 class="m-0 font-weight-bold text-primary">Create News Item</h5>--}}
+            <h5 class="m-0 font-weight-bold text-primary">{{__('news.primary')}}</h5>
             <a href="{{ route('news.index') }}" class="btn btn-secondary">Back to List</a>
         </div>
         <div class="card-body">

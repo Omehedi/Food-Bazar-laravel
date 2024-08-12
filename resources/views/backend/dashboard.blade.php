@@ -1,10 +1,11 @@
+{{App::setLocale('en')}}
 @extends('backend.layouts.master')
-
 @section('content')
     <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="page-header">
-                <h2 class="pageheader-title">E-commerce Dashboard Template </h2>
+{{--                <h2 class="pageheader-title">E-commerce Dashboard Template </h2>--}}
+                <h1 class="pageheader-title">{{__('text.title')}}</h1>
                 <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                 <div class="page-breadcrumb">
                     <nav aria-label="breadcrumb">

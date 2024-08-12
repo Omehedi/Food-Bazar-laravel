@@ -14,7 +14,7 @@ class VisitorLoginController extends Controller
     {
         // Validate the incoming request data, including the 'name' field
         $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required',
             'email' => 'required',
             'password' => 'required',
         ]);

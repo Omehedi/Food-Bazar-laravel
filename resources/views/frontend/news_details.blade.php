@@ -471,7 +471,7 @@
                     <!-- Social Follow Start -->
                     <div class="mb-3">
                         <div class="section-title mb-0">
-                            <h4 class="m-0 text-uppercase font-weight-bold">Follow Us</h4>
+                            <h4 class="m-0 text-uppercase font-weight-bold">Share Post</h4>
                         </div>
                         <div class="bg-white border border-top-0 p-3">
                             <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(Request::fullUrl()) }}" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #39569E;">

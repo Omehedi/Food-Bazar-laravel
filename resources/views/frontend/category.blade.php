@@ -39,6 +39,7 @@
                     </div>
                 </div>
             </div>
+
 {{--            pagination--}}
             <div class="d-flex justify-content-center">
                 {{ $news->links('pagination::bootstrap-5') }}
