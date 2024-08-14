@@ -496,6 +496,9 @@
 <script src="{{ asset('backend/assets/vendor/charts/c3charts/C3chartjs.js') }}"></script>
 <script src="{{ asset('backend/assets/libs/js/dashboard-ecommerce.js') }}"></script>
 
+<script>window.baseUrl = '{{url('/')}}'</script>
+@yield('script')
+
 </body>
 
 </html>
