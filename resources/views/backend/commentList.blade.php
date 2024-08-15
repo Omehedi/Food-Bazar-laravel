@@ -96,22 +96,43 @@
                 deleteComment(data) {
                     const _this = this;
                     Swal.fire({
-                        title: "Are you sure you want to delete this?",
-                        showDenyButton: true,
+                        title: "Are you sure?",
+                        text: "You won't be able to revert this!",
+                        icon: 'warning',
                         showCancelButton: true,
-                        confirmButtonText: "OK",
+                        confirmButtonColor: '#3085d6', // Primary button color
+                        cancelButtonColor: '#d33', // Cancel button color
+                        confirmButtonText: 'Yes, delete it!',
+                        cancelButtonText: 'Cancel',
                     }).then((result) => {
                         if (result.isConfirmed) {
                             var url = `${baseUrl}/api/comments_data/delete`;
 
                             axios.post(url, { id: data.id }) // Send ID for deletion
                                 .then(function (response) {
-                                    _this.showToast(response.data.message);
+                                    _this.showToast(response.data.message, 'green');
+
+                                    // Show SweetAlert success message
+                                    Swal.fire({
+                                        title: 'Deleted!',
+                                        text: response.data.message,
+                                        icon: 'success',
+                                        confirmButtonColor: '#3085d6',
+                                    });
+
                                     _this.getDataList();
                                 })
                                 .catch(function (error) {
                                     console.error(error);
                                     _this.showToast('Error deleting data', 'red');
+
+                                    // Show SweetAlert error message
+                                    Swal.fire({
+                                        title: 'Error!',
+                                        text: 'There was an issue deleting the comment.',
+                                        icon: 'error',
+                                        confirmButtonColor: '#3085d6',
+                                    });
                                 });
                         }
                     });
@@ -121,12 +142,20 @@
                         text: message,
                         bgColor: bgColor,
                         textColor: 'white',
-                        position: 'top-right'
+                        position: 'top-right',
+                        loaderBg: '#ff6849', // Adding a loader background color
+                        icon: 'info', // You can change this to 'error', 'warning', or 'success'
+                        hideAfter: 3000, // Auto-hide the toast after 3 seconds
+                        stack: 5, // Allow up to 5 toasts at once
+                        showHideTransition: 'fade', // Adds a fade effect to the toast
+                        allowToastClose: true, // Enables the option to close the toast by clicking on it
                     });
                 }
             }
         });
     </script>
+
+
 @endsection
 
 
