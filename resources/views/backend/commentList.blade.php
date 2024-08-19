@@ -11,9 +11,7 @@
             <div class="col-md-6 text-left">
                 <h1 class="h5 mb-2 text-gray-800">Comment List</h1>
             </div>
-            <div class="col-md-6 text-right mb-2">
-                <a href="" class="btn btn-primary">Add New</a>
-            </div>
+
         </div>
         <div class="card shadow mb-4">
             <div class="card-header py-3">
